@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,13 +45,18 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paymentIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kwl-Gt-ol1">
-                    <rect key="frame" x="0.0" y="70" width="375" height="188"/>
+                    <rect key="frame" x="47.5" y="70" width="280" height="188"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="kwl-Gt-ol1" secondAttribute="height" multiplier="375:188" id="hke-x6-WrV"/>
+                        <constraint firstAttribute="height" constant="188" id="W47-hV-iax">
+                            <variation key="heightClass=compact-widthClass=compact" constant="140"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="280" id="cTP-jL-DRq">
+                            <variation key="heightClass=compact-widthClass=compact" constant="220"/>
+                        </constraint>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Establezca un monto para pagar:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7de-9B-26e">
-                    <rect key="frame" x="20" y="343" width="335" height="21"/>
+                    <rect key="frame" x="20" y="270" width="335" height="94"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -61,19 +65,20 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fny-Bm-kbA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="70.5" id="4as-Wx-UVW"/>
+                <constraint firstItem="7de-9B-26e" firstAttribute="top" secondItem="kwl-Gt-ol1" secondAttribute="bottom" constant="12" id="AvP-CA-zN1"/>
                 <constraint firstItem="fny-Bm-kbA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DYB-uy-e2A"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fny-Bm-kbA" secondAttribute="trailing" constant="40" id="MWK-Bt-epd"/>
                 <constraint firstItem="7de-9B-26e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="P0L-Cm-m71"/>
-                <constraint firstItem="kwl-Gt-ol1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="QMK-uc-y0x"/>
+                <constraint firstItem="kwl-Gt-ol1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="QMK-uc-y0x">
+                    <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                </constraint>
                 <constraint firstItem="fny-Bm-kbA" firstAttribute="top" secondItem="7de-9B-26e" secondAttribute="bottom" constant="20" id="acv-I6-kSE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kha-tN-EH5" secondAttribute="trailing" id="bbY-IF-VDR"/>
                 <constraint firstItem="kha-tN-EH5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h0y-P6-m0b"/>
-                <constraint firstItem="kwl-Gt-ol1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="irQ-Ye-Dvh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7de-9B-26e" secondAttribute="trailing" constant="20" id="jMy-VL-7oS"/>
                 <constraint firstItem="kwl-Gt-ol1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="l9U-qT-PXe"/>
                 <constraint firstItem="fny-Bm-kbA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="sSh-3H-IvZ"/>
                 <constraint firstItem="kha-tN-EH5" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="tgt-mN-yMW"/>
-                <constraint firstItem="kwl-Gt-ol1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vUn-45-exK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="35.5" y="53.5"/>

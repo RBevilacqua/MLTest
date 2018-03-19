@@ -12,6 +12,8 @@ class AmountViewController: BaseViewController {
 
     @IBOutlet weak var amountTextField: UITextField!
     
+    
+    
     var amount: Float?
     
     override func viewDidLoad() {
@@ -23,6 +25,17 @@ class AmountViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.configureScreen), name: NSNotification.Name(rawValue: "changeOrientation"), object: nil)
+        
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "changeOrientation"), object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +43,7 @@ class AmountViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func configureScreen() -> Void {
+    @objc func configureScreen() -> Void {
         self.amountTextField.underlined()
     }
     

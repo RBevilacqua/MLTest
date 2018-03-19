@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MercadoPago" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-JR-ZDZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MercadoPago" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-JR-ZDZ">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="N5d-JR-ZDZ" secondAttribute="height" multiplier="15:8" id="S4u-Rg-Xs7"/>

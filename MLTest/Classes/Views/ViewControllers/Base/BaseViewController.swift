@@ -56,6 +56,11 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "changeOrientation"), object: nil)
+    }
+    
 
     /*
     // MARK: - Navigation

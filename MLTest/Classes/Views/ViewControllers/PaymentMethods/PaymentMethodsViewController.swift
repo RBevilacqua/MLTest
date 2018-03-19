@@ -12,9 +12,9 @@ import Kingfisher
 class PaymentMethodsViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var gridLayout: GridLayout = GridLayout(numberOfColumns: 2)
+    var gridLayout: GridLayout = GridLayout(numberOfColumns: 1)
     
-    var isGrid = true
+    var isGrid = false
     
     var viewModel: PaymentMethodsViewModel = PaymentMethodsViewModel()
     
@@ -35,7 +35,7 @@ class PaymentMethodsViewController: BaseViewController {
         
         self.configTitle(name: "Seleccione Metodo de Pago")
         
-        let rightBarButton = UIBarButtonItem(image: UIImage(named: "listIcon")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(self.changeLayout))
+        let rightBarButton = UIBarButtonItem(image: UIImage(named: "gridIcon")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(self.changeLayout))
         
         navigationItem.rightBarButtonItem = rightBarButton
         
@@ -178,13 +178,12 @@ extension PaymentMethodsViewController: UICollectionViewDelegate, UICollectionVi
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         gridLayout.invalidateLayout()
+        
     }
-    
-    
-    
     
 }
 
+// Delgate de Issuer
 extension PaymentMethodsViewController: IssuerDelegate {
     
     func retrieveIssuer(retrieve: (issuer: IssuerCard, payer: PayerCost)) {
